@@ -2,6 +2,6 @@
 
 exports.createPages = async () => {
   await new Promise((resolve, reject) => {
-    setTimeout(resolve, 25 * 60 * 1000)
+//    setTimeout(resolve, 25 * 60 * 1000)
   })
 }
