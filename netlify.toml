@@ -1,0 +1,7 @@
+[[edge_functions]]
+function = "set-response-header"
+path = "/*"
+
+[[edge_functions]]
+function = "user-error"
+path = "/*"
