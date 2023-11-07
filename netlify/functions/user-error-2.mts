@@ -6,5 +6,5 @@ export default async (req: Request, context: Context) => {
 };
 
 export const config: Config = {
-  path: "/user-error",
+  path: "/user-error-2",
 };
