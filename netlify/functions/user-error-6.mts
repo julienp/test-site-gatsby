@@ -2,7 +2,12 @@ import type { Config, Context } from "@netlify/functions";
 import fetch from "node-fetch";
 
 export default async (req: Request, context: Context) => {
-  await fetch("http://bananas-arent-real.example.com");
+  try {
+    await fetch("http://bananas-arent-real.example.com");
+  } catch (error) {
+    console.log({ error, isInstanceOfError: error instanceof Error });
+    throw error;
+  }
 };
 
 export const config: Config = {
