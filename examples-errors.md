@@ -170,3 +170,17 @@ curl -vs -H "x-nf-debug-logging: 1" "https://test-site-gatsby.netlify.app/.netli
   ]
 }
 ```
+
+## IPX/unstorage issue
+
+There was a bug in a dependency of `@netlify/ipx` that caused runtime errors
+
+https://netlify.slack.com/archives/C0QFKKY2U/p1700003932157229
+
+https://6553daba75121d0dd9923a58--nd-tricentis-live-full.netlify.app/_ipx/w_1920,q_75/https%3A%2F%2Fbe.tricentis.com%2Fmedia-assets%2F2022%2F08%2FHomePage_Hero_Faster_Software.png?url=https%3A%2F%2Fbe.tricentis.com%2Fmedia-assets%2F2022%2F08%2FHomePage_Hero_Faster_Software.png&w=1920&q=75
+
+```
+TypeError: (0 , fs_1.default) is not a function
+    at loadSourceImage (/var/task/node_modules/@netlify/ipx/dist/http.js:128:34)
+    at async handler (/var/task/node_modules/@netlify/ipx/dist/index.js:132:64)
+```
